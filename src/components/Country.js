@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 const Country = () => {
   const [country, setCountry] = useState([]);
@@ -23,6 +23,11 @@ const Country = () => {
         return (
           <div className="modal" id="modal">
             <div className="container">
+              <Link to="/">
+                <button class="btn-close" id="close">
+                  <i class="fas fa-times"></i>
+                </button>
+              </Link>
               <img src={c.flag} alt="" />
               <div className="modal-body">
                 <h2>{c.name}</h2>
